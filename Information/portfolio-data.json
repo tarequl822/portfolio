@@ -1,0 +1,127 @@
+{
+  "personal": {
+    "name": "Tarequl Islam",
+    "title": "Full-Stack Software Engineer",
+    "tagline": "Crafting Digital Experiences with Code & Creativity",
+    "bio": "Passionate software engineer with 5+ years of experience building scalable web applications and mobile apps. I specialize in modern web technologies and love turning complex problems into elegant solutions.",
+    "email": "tareq.tmns@email.com",
+    "phone": "+880 1682909653",
+    "location": "San Francisco, CA",
+    "avatar": "profilePic.png",
+    "coverPhoto": "coverPhoto.jpg"
+  },
+  "skills": {
+    "frontend": ["React", "Vue.js", "Angular", "TypeScript", "HTML5", "Tailwind CSS"],
+    "backend": ["Node.js", "Python", "Java", "C#", "Express.js", "Django", "Spring Boot"],
+    "database": ["MongoDB", "PostgreSQL", "MySQL",  "Firebase"],
+    "devops": ["Docker", "AWS", "Azure", "Git", "CI/CD", "Kubernetes"],
+    "tools": ["VS Code", "Figma", "Postman", "Jira", "Slack"]
+  },
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "TechCorp Inc.",
+      "period": "2022 - Present",
+      "description": "Leading development of enterprise web applications using React and Node.js. Mentoring junior developers and implementing best practices.",
+      "technologies": ["React", "Node.js", "MongoDB", "AWS"]
+    },
+    {
+      "title": "Full-Stack Developer",
+      "company": "StartupXYZ",
+      "period": "2020 - 2022",
+      "description": "Built and maintained multiple web applications. Collaborated with design and product teams to deliver user-centric solutions.",
+      "technologies": ["Vue.js", "Python", "PostgreSQL", "Docker"]
+    },
+    {
+      "title": "Junior Developer",
+      "company": "Digital Solutions",
+      "period": "2019 - 2020",
+      "description": "Developed responsive websites and contributed to team projects. Learned modern development practices and tools.",
+      "technologies": ["HTML", "CSS", "JavaScript", "PHP"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "University of Technology",
+      "period": "2015 - 2019",
+      "gpa": "3.8/4.0"
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-Commerce Platform",
+      "description": "A full-stack e-commerce solution with user authentication, product management, and payment integration.",
+      "image": "project1.jpg",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "liveUrl": "https://ecommerce-demo.com",
+      "githubUrl": "https://github.com/alexchen/ecommerce",
+      "category": "web-app"
+    },
+    {
+      "title": "Task Management App",
+      "description": "A collaborative task management application with real-time updates and team collaboration features.",
+      "image": "project2.jpg",
+      "technologies": ["Vue.js", "Firebase", "Vuex", "Vuetify"],
+      "liveUrl": "https://taskmanager-demo.com",
+      "githubUrl": "https://github.com/alexchen/taskmanager",
+      "category": "web-app"
+    },
+    {
+      "title": "Weather Dashboard",
+      "description": "A responsive weather application with location-based forecasts and interactive charts.",
+      "image": "project3.jpg",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "OpenWeather API"],
+      "liveUrl": "https://weather-demo.com",
+      "githubUrl": "https://github.com/alexchen/weather",
+      "category": "web-design"
+    },
+    {
+      "title": "Portfolio Website",
+      "description": "A modern, responsive portfolio website with dark/light mode and smooth animations.",
+      "image": "project4.jpg",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "GSAP"],
+      "liveUrl": "https://portfolio-demo.com",
+      "githubUrl": "https://github.com/alexchen/portfolio",
+      "category": "web-design"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Sarah Johnson",
+      "role": "Product Manager",
+      "company": "TechCorp Inc.",
+      "quote": "Alex is an exceptional developer who consistently delivers high-quality code. His attention to detail and problem-solving skills are outstanding.",
+      "avatar": "testimonial1.jpg"
+    },
+    {
+      "name": "Mike Rodriguez",
+      "role": "Senior Developer",
+      "company": "StartupXYZ",
+      "quote": "Working with Alex was a great experience. He's not only technically skilled but also a great team player who always helps others grow.",
+      "avatar": "testimonial2.jpg"
+    },
+    {
+      "name": "Emily Chen",
+      "role": "UI/UX Designer",
+      "company": "Digital Solutions",
+      "quote": "Alex has a great eye for design and always ensures the final product matches the design specifications perfectly.",
+      "avatar": "testimonial3.jpg"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/alexchen",
+    "linkedin": "https://linkedin.com/in/alexchen",
+    "twitter": "https://twitter.com/alexchen",
+    "instagram": "https://instagram.com/alexchen",
+    "dribbble": "https://dribbble.com/alexchen",
+    "behance": "https://behance.net/alexchen"
+  },
+  "interests": ["Photography", "Reading", "Hiking", "Cooking", "Gaming"],
+  "achievements": [
+    "Best Developer Award 2023",
+    "Top Contributor - Open Source Project",
+    "Hackathon Winner 2022",
+    "Employee of the Month - Q4 2023"
+  ]
+} 

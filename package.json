@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "A responsive portfolio website with day/night mode",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000",
+    "dev": "npx http-server -p 8000"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "responsive",
+    "dark-mode",
+    "light-mode",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Tarequl Islam",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
