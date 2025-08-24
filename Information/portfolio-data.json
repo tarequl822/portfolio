@@ -54,35 +54,35 @@
       "description": "A full-stack e-commerce solution with user authentication, product management, and payment integration.",
       "image": "project1.jpg",
       "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
-      "liveUrl": "https://ecommerce-demo.com",
-      "githubUrl": "https://github.com/alexchen/ecommerce",
+      "liveUrl": "#",
+      "githubUrl": "#",
       "category": "web-app"
     },
     {
       "title": "Task Management App",
       "description": "A collaborative task management application with real-time updates and team collaboration features.",
-      "image": "project2.jpg",
+      "image": "project1.jpg",
       "technologies": ["Vue.js", "Firebase", "Vuex", "Vuetify"],
-      "liveUrl": "https://taskmanager-demo.com",
-      "githubUrl": "https://github.com/alexchen/taskmanager",
+      "liveUrl": "#",
+      "githubUrl": "#",
       "category": "web-app"
     },
     {
       "title": "Weather Dashboard",
       "description": "A responsive weather application with location-based forecasts and interactive charts.",
-      "image": "project3.jpg",
+      "image": "project1.jpg",
       "technologies": ["HTML5", "CSS3", "JavaScript", "OpenWeather API"],
-      "liveUrl": "https://weather-demo.com",
-      "githubUrl": "https://github.com/alexchen/weather",
+      "liveUrl": "#",
+      "githubUrl": "#",
       "category": "web-design"
     },
     {
       "title": "Portfolio Website",
       "description": "A modern, responsive portfolio website with dark/light mode and smooth animations.",
-      "image": "project4.jpg",
+      "image": "project1.jpg",
       "technologies": ["HTML5", "CSS3", "JavaScript", "GSAP"],
-      "liveUrl": "https://portfolio-demo.com",
-      "githubUrl": "https://github.com/alexchen/portfolio",
+      "liveUrl": "#",
+      "githubUrl": "#",
       "category": "web-design"
     }
   ],
@@ -91,31 +91,29 @@
       "name": "Sarah Johnson",
       "role": "Product Manager",
       "company": "TechCorp Inc.",
-      "quote": "Alex is an exceptional developer who consistently delivers high-quality code. His attention to detail and problem-solving skills are outstanding.",
-      "avatar": "testimonial1.jpg"
+      "quote": "Tarequl is an exceptional developer who consistently delivers high-quality code. His attention to detail and problem-solving skills are outstanding.",
+      "avatar": "profilePic.png"
     },
     {
       "name": "Mike Rodriguez",
       "role": "Senior Developer",
       "company": "StartupXYZ",
-      "quote": "Working with Alex was a great experience. He's not only technically skilled but also a great team player who always helps others grow.",
-      "avatar": "testimonial2.jpg"
+      "quote": "Working with Tarequl was a great experience. He's not only technically skilled but also a great team player who always helps others grow.",
+      "avatar": "profilePic.png"
     },
     {
       "name": "Emily Chen",
       "role": "UI/UX Designer",
       "company": "Digital Solutions",
-      "quote": "Alex has a great eye for design and always ensures the final product matches the design specifications perfectly.",
-      "avatar": "testimonial3.jpg"
+      "quote": "Tarequl has a great eye for design and always ensures the final product matches the design specifications perfectly.",
+      "avatar": "profilePic.png"
     }
   ],
   "social": {
-    "github": "https://github.com/alexchen",
-    "linkedin": "https://linkedin.com/in/alexchen",
-    "twitter": "https://twitter.com/alexchen",
-    "instagram": "https://instagram.com/alexchen",
-    "dribbble": "https://dribbble.com/alexchen",
-    "behance": "https://behance.net/alexchen"
+    "github": "#",
+    "linkedin": "#",
+    "twitter": "#",
+    "instagram": "#"
   },
   "interests": ["Photography", "Reading", "Hiking", "Cooking", "Gaming"],
   "achievements": [

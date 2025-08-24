@@ -40,7 +40,7 @@ class PortfolioWebsite {
                 title: "Full-Stack Software Engineer",
                 tagline: "Crafting Digital Experiences with Code & Creativity",
                 bio: "Passionate software engineer with 5+ years of experience building scalable web applications and mobile apps.",
-                email: "alex.chen@email.com",
+                email: "tareq.tmns@email.com",
                 phone: "+1 (555) 123-4567",
                 location: "San Francisco, CA"
             },
@@ -75,7 +75,7 @@ class PortfolioWebsite {
                     name: "Sarah Johnson",
                     role: "Product Manager",
                     company: "TechCorp Inc.",
-                    quote: "Alex is an exceptional developer who consistently delivers high-quality code.",
+                    quote: "Tarequl is an exceptional developer who consistently delivers high-quality code.",
                     avatar: "testimonial1.jpg"
                 }
             ],
@@ -244,7 +244,7 @@ class PortfolioWebsite {
 
         projectsGrid.innerHTML = this.portfolioData.projects.map(project => `
             <div class="project-card" data-category="${project.category}">
-                <img src="../Photos/${project.image}" alt="${project.title}" class="project-image" 
+                                        <img src="Photos/${project.image}" alt="${project.title}" class="project-image" 
                      onerror="this.src='https://via.placeholder.com/400x200/4a90e2/ffffff?text=${encodeURIComponent(project.title)}'">
                 <div class="project-content">
                     <h3 class="project-title">${project.title}</h3>
@@ -275,7 +275,7 @@ class PortfolioWebsite {
             <div class="testimonial-item ${index === 0 ? 'active' : ''}" data-index="${index}">
                 <p class="testimonial-quote">"${testimonial.quote}"</p>
                 <div class="testimonial-author">
-                    <img src="../Photos/${testimonial.avatar}" alt="${testimonial.name}" class="testimonial-avatar"
+                    <img src="Photos/${testimonial.avatar}" alt="${testimonial.name}" class="testimonial-avatar"
                          onerror="this.src='https://via.placeholder.com/60x60/4a90e2/ffffff?text=${testimonial.name.charAt(0)}'">
                     <div class="testimonial-info">
                         <h4>${testimonial.name}</h4>
