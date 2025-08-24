@@ -96,6 +96,7 @@ body {
     background-color: var(--bg-primary);
     transition: background-color var(--transition-normal), color var(--transition-normal);
     overflow-x: hidden;
+    padding-top: 70px;
 }
 
 /* Typography */
@@ -329,7 +330,6 @@ a:hover {
     z-index: 1000;
     transition: all var(--transition-normal);
     height: 70px;
-    position: relative;
 }
 
 .nav-container {
@@ -404,15 +404,14 @@ a:hover {
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
+.hero-background {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../Photos/coverPhoto.jpg') center/cover;
-    opacity: 0.1;
+    background: url('Photos/coverPhoto.jpg') center/cover;
+    opacity: 0.15;
     z-index: 1;
 }
 
@@ -1360,5 +1359,113 @@ a:focus {
     body {
         background: white;
         color: black;
+    }
+} 
+
+/* Programming Languages Chart Section */
+.languages {
+    padding: var(--spacing-xxl) 0;
+    background: var(--bg-secondary);
+}
+
+.languages-chart {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) 0;
+}
+
+.language-item {
+    margin-bottom: var(--spacing-lg);
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease;
+}
+
+.language-item.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.language-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.language-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.language-percentage {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 12px;
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+    border-radius: 6px;
+    position: relative;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 0 !important;
+}
+
+.skill-progress.animate {
+    width: var(--skill-width) !important;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Responsive adjustments for languages section */
+@media (max-width: 768px) {
+    .languages-chart {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .language-item {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .language-name {
+        font-size: 1rem;
+    }
+    
+    .language-percentage {
+        font-size: 0.9rem;
+    }
+    
+    .skill-bar {
+        height: 10px;
     }
 } 

@@ -2,7 +2,6 @@
 class PortfolioWebsite {
     constructor() {
         this.portfolioData = null;
-        this.currentTestimonial = 0;
         this.currentTheme = 'dark';
         this.init();
     }
@@ -37,53 +36,73 @@ class PortfolioWebsite {
         return {
             personal: {
                 name: "Tarequl Islam",
-                title: "Full-Stack Software Engineer",
-                tagline: "Crafting Digital Experiences with Code & Creativity",
-                bio: "Passionate software engineer with 5+ years of experience building scalable web applications and mobile apps.",
+                title: "Student Developer",
+                tagline: "Student at United International University",
+                bio: "Tarequl Islam | Student at United International University | Backend web developer(Node.js , Express , MySQL) | UI/UX Designer |Python, C, and Java",
                 email: "tareq.tmns@email.com",
-                phone: "+1 (555) 123-4567",
-                location: "San Francisco, CA"
+                phone: "+880 1682909653",
+                location: "Dhaka, Bangladesh"
             },
             skills: {
-                frontend: ["React", "Vue.js", "Angular", "TypeScript"],
-                backend: ["Node.js", "Python", "Java", "C#"],
-                database: ["MongoDB", "PostgreSQL", "MySQL", "Redis"],
-                devops: ["Docker", "AWS", "Azure", "Git"]
+                frontend: ["React", "Vue.js", "Angular", "TypeScript", "HTML5", "Tailwind CSS"],
+                backend: ["Node.js", "Python", "Java", "Express.js", "Django"],
+                database: ["MongoDB", "PostgreSQL", "MySQL"],
+                devops: ["Git"],
+                tools: ["VS Code", "Figma", "Postman", "Jira"]
             },
+            programmingLanguages: [
+                {
+                    "name": "JavaScript",
+                    "proficiency": 90,
+                    "description": "Advanced - Full-stack development, Node.js, React"
+                },
+                {
+                    "name": "Python",
+                    "proficiency": 85,
+                    "description": "Advanced - Backend development, Django, data analysis"
+                },
+                {
+                    "name": "Java",
+                    "proficiency": 80,
+                    "description": "Intermediate - Desktop applications, Android development"
+                },
+                {
+                    "name": "C",
+                    "proficiency": 75,
+                    "description": "Intermediate - System programming, algorithms"
+                },
+                {
+                    "name": "HTML/CSS",
+                    "proficiency": 70,
+                    "description": "Intermediate - Web development, responsive design"
+                }
+            ],
             experience: [
                 {
-                    title: "Senior Software Engineer",
-                    company: "TechCorp Inc.",
-                    period: "2022 - Present",
-                    description: "Leading development of enterprise web applications.",
-                    technologies: ["React", "Node.js", "MongoDB", "AWS"]
+                    title: "Backend Developer Intern",
+                    company: "Tech Solutions Ltd.",
+                    period: "June 2023 - August 2023",
+                    description: "Developed RESTful APIs using Node.js and Express. Collaborated with frontend developers to integrate APIs with React applications. Improved database performance by optimizing queries in MongoDB.",
+                    technologies: ["Node.js", "Express", "MongoDB", "React"]
                 }
             ],
             projects: [
                 {
-                    title: "E-Commerce Platform",
-                    description: "A full-stack e-commerce solution with user authentication.",
+                    title: "Chess engine",
+                    description: "offline 2 player chess game",
                     image: "project1.jpg",
-                    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+                    technologies: ["Java", "JavaFX", "MySQL", "SceneBuilder"],
                     liveUrl: "#",
-                    githubUrl: "#",
-                    category: "web-app"
+                    githubUrl: "https://github.com/tarequl822/chess-game",
+                    category: "app"
                 }
             ],
-            testimonials: [
-                {
-                    name: "Sarah Johnson",
-                    role: "Product Manager",
-                    company: "TechCorp Inc.",
-                    quote: "Tarequl is an exceptional developer who consistently delivers high-quality code.",
-                    avatar: "testimonial1.jpg"
-                }
-            ],
+            testimonials: [],
             social: {
-                github: "#",
-                linkedin: "#",
-                twitter: "#",
-                instagram: "#"
+                github: "https://github.com/tarequl822",
+                linkedin: "https://www.linkedin.com/in/tarequlislam-2b5a52269/",
+                facebook: "https://www.facebook.com/mdtarequl.is",
+                instagram: "https://www.instagram.com/_tarequl__islam/"
             }
         };
     }
@@ -113,12 +132,6 @@ class PortfolioWebsite {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', (e) => this.filterProjects(e));
         });
-
-        // Testimonial navigation
-        const prevBtn = document.getElementById('prevTestimonial');
-        const nextBtn = document.getElementById('nextTestimonial');
-        if (prevBtn) prevBtn.addEventListener('click', () => this.showPreviousTestimonial());
-        if (nextBtn) nextBtn.addEventListener('click', () => this.showNextTestimonial());
 
         // Contact form
         const contactForm = document.getElementById('contactForm');
@@ -166,8 +179,8 @@ class PortfolioWebsite {
         // Populate projects
         this.populateProjects();
 
-        // Populate testimonials
-        this.populateTestimonials();
+        // Populate programming languages chart
+        this.populateProgrammingLanguages();
     }
 
     updateElement(id, content) {
@@ -183,7 +196,7 @@ class PortfolioWebsite {
         const socialLinks = {
             'githubLink': this.portfolioData.social.github,
             'linkedinLink': this.portfolioData.social.linkedin,
-            'twitterLink': this.portfolioData.social.twitter,
+            'facebookLink': this.portfolioData.social.facebook,
             'instagramLink': this.portfolioData.social.instagram
         };
 
@@ -224,12 +237,12 @@ class PortfolioWebsite {
         timeline.innerHTML = this.portfolioData.experience.map(exp => `
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3 class="timeline-title">${exp.title}</h3>
+                    <h3 class="timeline-title">${exp.title || exp.role}</h3>
                     <p class="timeline-company">${exp.company}</p>
                     <p class="timeline-period">${exp.period}</p>
-                    <p class="timeline-description">${exp.description}</p>
+                    <p class="timeline-description">${exp.description || exp.details}</p>
                     <div class="timeline-tech">
-                        ${exp.technologies.map(tech => `<span>${tech}</span>`).join('')}
+                        ${(exp.technologies || []).map(tech => `<span>${tech}</span>`).join('')}
                     </div>
                 </div>
             </div>
@@ -244,7 +257,7 @@ class PortfolioWebsite {
 
         projectsGrid.innerHTML = this.portfolioData.projects.map(project => `
             <div class="project-card" data-category="${project.category}">
-                                        <img src="Photos/${project.image}" alt="${project.title}" class="project-image" 
+                <img src="Photos/${project.image}" alt="${project.title}" class="project-image" 
                      onerror="this.src='https://via.placeholder.com/400x200/4a90e2/ffffff?text=${encodeURIComponent(project.title)}'">
                 <div class="project-content">
                     <h3 class="project-title">${project.title}</h3>
@@ -265,34 +278,30 @@ class PortfolioWebsite {
         `).join('');
     }
 
-    populateTestimonials() {
-        if (!this.portfolioData.testimonials) return;
+    populateProgrammingLanguages() {
+        if (!this.portfolioData.programmingLanguages) return;
 
-        const slider = document.getElementById('testimonialsSlider');
-        if (!slider) return;
+        const languagesChart = document.querySelector('.languages-chart');
+        if (!languagesChart) return;
 
-        slider.innerHTML = this.portfolioData.testimonials.map((testimonial, index) => `
-            <div class="testimonial-item ${index === 0 ? 'active' : ''}" data-index="${index}">
-                <p class="testimonial-quote">"${testimonial.quote}"</p>
-                <div class="testimonial-author">
-                    <img src="Photos/${testimonial.avatar}" alt="${testimonial.name}" class="testimonial-avatar"
-                         onerror="this.src='https://via.placeholder.com/60x60/4a90e2/ffffff?text=${testimonial.name.charAt(0)}'">
-                    <div class="testimonial-info">
-                        <h4>${testimonial.name}</h4>
-                        <p>${testimonial.role} at ${testimonial.company}</p>
-                    </div>
+        languagesChart.innerHTML = this.portfolioData.programmingLanguages.map(lang => `
+            <div class="language-item" data-skill="${lang.proficiency}">
+                <div class="language-info">
+                    <span class="language-name">${lang.name}</span>
+                    <span class="language-percentage">${lang.proficiency}%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%"></div>
                 </div>
             </div>
         `).join('');
     }
 
+
+
+
+
     initializeComponents() {
-        // Initialize testimonial counter
-        this.currentTestimonial = 0;
-        
-        // Auto-rotate testimonials
-        this.startTestimonialRotation();
-        
         // Initialize intersection observer for animations
         this.initializeAnimations();
     }
@@ -408,37 +417,9 @@ class PortfolioWebsite {
         });
     }
 
-    showPreviousTestimonial() {
-        if (!this.portfolioData.testimonials) return;
-        
-        this.currentTestimonial = (this.currentTestimonial - 1 + this.portfolioData.testimonials.length) % this.portfolioData.testimonials.length;
-        this.showTestimonial(this.currentTestimonial);
-    }
 
-    showNextTestimonial() {
-        if (!this.portfolioData.testimonials) return;
-        
-        this.currentTestimonial = (this.currentTestimonial + 1) % this.portfolioData.testimonials.length;
-        this.showTestimonial(this.currentTestimonial);
-    }
 
-    showTestimonial(index) {
-        const testimonials = document.querySelectorAll('.testimonial-item');
-        testimonials.forEach((item, i) => {
-            item.classList.remove('active');
-            if (i === index) {
-                item.classList.add('active');
-            }
-        });
-    }
 
-    startTestimonialRotation() {
-        if (!this.portfolioData.testimonials || this.portfolioData.testimonials.length <= 1) return;
-        
-        setInterval(() => {
-            this.showNextTestimonial();
-        }, 5000); // Change every 5 seconds
-    }
 
     initializeAnimations() {
         // Intersection Observer for fade-in animations
@@ -452,18 +433,39 @@ class PortfolioWebsite {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
+                    
+                    // Special handling for language items
+                    if (entry.target.classList.contains('language-item')) {
+                        this.animateLanguageBar(entry.target);
+                    }
                 }
             });
         }, observerOptions);
 
         // Observe elements for animation
-        const animateElements = document.querySelectorAll('.skill-category, .timeline-item, .project-card, .stat-item');
+        const animateElements = document.querySelectorAll('.skill-category, .timeline-item, .project-card, .stat-item, .language-item');
         animateElements.forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+    }
+
+    animateLanguageBar(languageItem) {
+        const skillBar = languageItem.querySelector('.skill-progress');
+        const skillLevel = languageItem.getAttribute('data-skill');
+        
+        if (skillBar) {
+            // Add animation class
+            languageItem.classList.add('animate');
+            
+            // Animate the skill bar
+            setTimeout(() => {
+                skillBar.style.setProperty('--skill-width', `${skillLevel}%`);
+                skillBar.classList.add('animate');
+            }, 300);
+        }
     }
 
     async handleContactForm(e) {

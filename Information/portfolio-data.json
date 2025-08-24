@@ -3,123 +3,88 @@
     "name": "Tarequl Islam",
     "title": "Full-Stack Software Engineer",
     "tagline": "Crafting Digital Experiences with Code & Creativity",
-    "bio": "Passionate software engineer with 5+ years of experience building scalable web applications and mobile apps. I specialize in modern web technologies and love turning complex problems into elegant solutions.",
+    "bio": " I am a Computer Science and Engineering student at United International University with a strong interest in Data Science and Backend Web Development. As I begin my journey in the tech field, I am eager to build practical skills by working on meaningful projects that provide valuable learning opportunities. I am passionate about problem-solving, exploring data-driven insights, and developing efficient backend systems. With curiosity and determination, I look forward to growing my expertise while collaborating with peers and professionals in the field.",
     "email": "tareq.tmns@email.com",
     "phone": "+880 1682909653",
-    "location": "San Francisco, CA",
+    "location": "Dhaka, Bangladesh",
     "avatar": "profilePic.png",
     "coverPhoto": "coverPhoto.jpg"
   },
   "skills": {
     "frontend": ["React", "Vue.js", "Angular", "TypeScript", "HTML5", "Tailwind CSS"],
-    "backend": ["Node.js", "Python", "Java", "C#", "Express.js", "Django", "Spring Boot"],
-    "database": ["MongoDB", "PostgreSQL", "MySQL",  "Firebase"],
-    "devops": ["Docker", "AWS", "Azure", "Git", "CI/CD", "Kubernetes"],
-    "tools": ["VS Code", "Figma", "Postman", "Jira", "Slack"]
+    "backend": ["Node.js", "Python", "Java", "Express.js", "Django"],
+    "database": ["MongoDB", "PostgreSQL", "MySQL"],
+    "devops": ["Git"],
+    "tools": ["VS Code", "Figma", "Postman", "Jira"]
   },
+  "programmingLanguages": [
+    {
+      "name": "JavaScript",
+      "proficiency": 90,
+      "description": "Advanced - Full-stack development, Node.js, React"
+    },
+    {
+      "name": "Python",
+      "proficiency": 85,
+      "description": "Advanced - Backend development, Django, data analysis"
+    },
+    {
+      "name": "Java",
+      "proficiency": 80,
+      "description": "Intermediate - Desktop applications, Android development"
+    },
+    {
+      "name": "C",
+      "proficiency": 75,
+      "description": "Intermediate - System programming, algorithms"
+    },
+    {
+      "name": "HTML/CSS",
+      "proficiency": 70,
+      "description": "Intermediate - Web development, responsive design"
+    }
+  ],
   "experience": [
     {
-      "title": "Senior Software Engineer",
-      "company": "TechCorp Inc.",
-      "period": "2022 - Present",
-      "description": "Leading development of enterprise web applications using React and Node.js. Mentoring junior developers and implementing best practices.",
-      "technologies": ["React", "Node.js", "MongoDB", "AWS"]
+      "role": "Backend Developer Intern",
+      "company": "Tech Solutions Ltd.",
+      "period": "June 2023 - August 2023",
+      "details": "Developed RESTful APIs using Node.js and Express. Collaborated with frontend developers to integrate APIs with React applications. Improved database performance by optimizing queries in MongoDB."
     },
     {
-      "title": "Full-Stack Developer",
-      "company": "StartupXYZ",
-      "period": "2020 - 2022",
-      "description": "Built and maintained multiple web applications. Collaborated with design and product teams to deliver user-centric solutions.",
-      "technologies": ["Vue.js", "Python", "PostgreSQL", "Docker"]
-    },
-    {
-      "title": "Junior Developer",
-      "company": "Digital Solutions",
-      "period": "2019 - 2020",
-      "description": "Developed responsive websites and contributed to team projects. Learned modern development practices and tools.",
-      "technologies": ["HTML", "CSS", "JavaScript", "PHP"]
+      "role": "Freelance Web Developer",
+      "company": "Self-Employed",
+      "period": "January 2022 - Present",
+      "details": "Designed and developed responsive websites for small businesses using HTML, CSS, JavaScript, and React. Implemented backend services with Node.js and Express, ensuring seamless user experiences."
     }
   ],
   "education": [
     {
       "degree": "Bachelor of Science in Computer Science",
-      "school": "University of Technology",
-      "period": "2015 - 2019",
-      "gpa": "3.8/4.0"
+      "school": "United International University (UIU)",
+      "period": "2023 - Present",
+      "details": "Currently pursuing a B.Sc. in Computer Science with a focus on software development and data structures."
     }
   ],
   "projects": [
     {
-      "title": "E-Commerce Platform",
-      "description": "A full-stack e-commerce solution with user authentication, product management, and payment integration.",
+      "title": "Chess engine",
+      "description": "offline 2 player chess game",
       "image": "project1.jpg",
-      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "category": "web-app"
-    },
-    {
-      "title": "Task Management App",
-      "description": "A collaborative task management application with real-time updates and team collaboration features.",
-      "image": "project1.jpg",
-      "technologies": ["Vue.js", "Firebase", "Vuex", "Vuetify"],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "category": "web-app"
-    },
-    {
-      "title": "Weather Dashboard",
-      "description": "A responsive weather application with location-based forecasts and interactive charts.",
-      "image": "project1.jpg",
-      "technologies": ["HTML5", "CSS3", "JavaScript", "OpenWeather API"],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "category": "web-design"
-    },
-    {
-      "title": "Portfolio Website",
-      "description": "A modern, responsive portfolio website with dark/light mode and smooth animations.",
-      "image": "project1.jpg",
-      "technologies": ["HTML5", "CSS3", "JavaScript", "GSAP"],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "category": "web-design"
+      "technologies": ["java", "javaFX", "MySQL", "SceneBuilder"],
+      "githubUrl": "https://github.com/tarequl822/chess-game",
+      "category": "app"
     }
   ],
-  "testimonials": [
-    {
-      "name": "Sarah Johnson",
-      "role": "Product Manager",
-      "company": "TechCorp Inc.",
-      "quote": "Tarequl is an exceptional developer who consistently delivers high-quality code. His attention to detail and problem-solving skills are outstanding.",
-      "avatar": "profilePic.png"
-    },
-    {
-      "name": "Mike Rodriguez",
-      "role": "Senior Developer",
-      "company": "StartupXYZ",
-      "quote": "Working with Tarequl was a great experience. He's not only technically skilled but also a great team player who always helps others grow.",
-      "avatar": "profilePic.png"
-    },
-    {
-      "name": "Emily Chen",
-      "role": "UI/UX Designer",
-      "company": "Digital Solutions",
-      "quote": "Tarequl has a great eye for design and always ensures the final product matches the design specifications perfectly.",
-      "avatar": "profilePic.png"
-    }
-  ],
+  
   "social": {
-    "github": "#",
-    "linkedin": "#",
-    "twitter": "#",
-    "instagram": "#"
+    "github": "https://github.com/tarequl822",
+    "linkedin": "https://www.linkedin.com/in/tarequlislam-2b5a52269/",
+    "facebook": "https://www.facebook.com/mdtarequl.is",
+    "instagram": "https://www.instagram.com/_tarequl__islam/"
   },
-  "interests": ["Photography", "Reading", "Hiking", "Cooking", "Gaming"],
+  "interests": ["Traveling","Photography", "Reading", "Hiking", "Cooking"],
   "achievements": [
-    "Best Developer Award 2023",
-    "Top Contributor - Open Source Project",
-    "Hackathon Winner 2022",
-    "Employee of the Month - Q4 2023"
+    ""
   ]
 } 
