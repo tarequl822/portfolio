@@ -20,11 +20,13 @@ class PortfolioWebsite {
 
     async loadPortfolioData() {
         try {
-            const response = await fetch('Information/portfolio-data.json');
+            // Add cache-busting parameter to prevent caching issues
+            const response = await fetch(`Information/portfolio-data.json?t=${Date.now()}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             this.portfolioData = await response.json();
+            console.log('Portfolio data loaded successfully:', this.portfolioData);
         } catch (error) {
             console.error('Error loading portfolio data:', error);
             // Fallback to default data if JSON loading fails
@@ -53,28 +55,28 @@ class PortfolioWebsite {
             programmingLanguages: [
                 {
                     "name": "JavaScript",
-                    "proficiency": 90,
-                    "description": "Advanced - Full-stack development, Node.js, React"
+                    "proficiency": 70,
+                    "description": "Intermediate - Full-stack development, Node.js, React"
                 },
                 {
                     "name": "Python",
-                    "proficiency": 85,
-                    "description": "Advanced - Backend development, Django, data analysis"
+                    "proficiency": 45,
+                    "description": "Beginner - Backend development, Django, data analysis"
                 },
                 {
                     "name": "Java",
-                    "proficiency": 80,
+                    "proficiency": 65,
                     "description": "Intermediate - Desktop applications, Android development"
                 },
                 {
                     "name": "C",
-                    "proficiency": 75,
+                    "proficiency": 70,
                     "description": "Intermediate - System programming, algorithms"
                 },
                 {
                     "name": "HTML/CSS",
-                    "proficiency": 70,
-                    "description": "Intermediate - Web development, responsive design"
+                    "proficiency": 80,
+                    "description": "Advanced - Web development, responsive design"
                 }
             ],
             experience: [
@@ -279,10 +281,18 @@ class PortfolioWebsite {
     }
 
     populateProgrammingLanguages() {
-        if (!this.portfolioData.programmingLanguages) return;
+        if (!this.portfolioData.programmingLanguages) {
+            console.error('Programming languages data not found');
+            return;
+        }
 
         const languagesChart = document.querySelector('.languages-chart');
-        if (!languagesChart) return;
+        if (!languagesChart) {
+            console.error('Languages chart element not found');
+            return;
+        }
+
+        console.log('Loading programming languages:', this.portfolioData.programmingLanguages);
 
         languagesChart.innerHTML = this.portfolioData.programmingLanguages.map(lang => `
             <div class="language-item" data-skill="${lang.proficiency}">
@@ -584,6 +594,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Add loading animation
     document.body.classList.add('loaded');
+    
+    // Force refresh programming languages after a short delay to ensure DOM is ready
+    setTimeout(() => {
+        if (portfolio.portfolioData && portfolio.portfolioData.programmingLanguages) {
+            portfolio.populateProgrammingLanguages();
+        }
+    }, 100);
 });
 
 // Add CSS for loading animation
