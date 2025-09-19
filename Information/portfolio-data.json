@@ -21,28 +21,28 @@
   "programmingLanguages": [
     {
       "name": "JavaScript",
-      "proficiency": 90,
-      "description": "Advanced - Full-stack development, Node.js, React"
+      "proficiency": 70,
+      "description": "Intermediate - Full-stack development, Node.js, React"
     },
     {
       "name": "Python",
-      "proficiency": 85,
-      "description": "Advanced - Backend development, Django, data analysis"
+      "proficiency": 45,
+      "description": "Beginner - Backend development, Django, data analysis"
     },
     {
       "name": "Java",
-      "proficiency": 80,
+      "proficiency": 65,
       "description": "Intermediate - Desktop applications, Android development"
     },
     {
       "name": "C",
-      "proficiency": 75,
+      "proficiency": 70,
       "description": "Intermediate - System programming, algorithms"
     },
     {
       "name": "HTML/CSS",
-      "proficiency": 70,
-      "description": "Intermediate - Web development, responsive design"
+      "proficiency": 80,
+      "description": "Advanced - Web development, responsive design"
     }
   ],
   "experience": [
