@@ -3,12 +3,19 @@ class PortfolioWebsite {
     constructor() {
         this.portfolioData = null;
         this.currentTheme = 'dark';
+        this.emailjsConfig = {
+            serviceId: 'service_portfolio', // Replace with your EmailJS service ID
+            templateId: 'template_portfolio', // Replace with your EmailJS template ID
+            publicKey: 'your_public_key', // Replace with your EmailJS public key
+            enabled: false // Set to true when you have EmailJS configured
+        };
         this.init();
     }
 
     async init() {
         try {
             await this.loadPortfolioData();
+            this.initializeEmailJS();
             this.setupEventListeners();
             this.populateContent();
             this.initializeComponents();
@@ -31,6 +38,20 @@ class PortfolioWebsite {
             console.error('Error loading portfolio data:', error);
             // Fallback to default data if JSON loading fails
             this.portfolioData = this.getDefaultData();
+        }
+    }
+
+    initializeEmailJS() {
+        try {
+            // Initialize EmailJS with your public key
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init(this.emailjsConfig.publicKey);
+                console.log('EmailJS initialized successfully');
+            } else {
+                console.warn('EmailJS not loaded. Contact form will use fallback method.');
+            }
+        } catch (error) {
+            console.error('Error initializing EmailJS:', error);
         }
     }
 
@@ -498,20 +519,54 @@ class PortfolioWebsite {
         }
 
         try {
-            // Simulate form submission (replace with actual form handling)
-            await this.simulateFormSubmission(formObject);
-            this.showNotification('Thank you! Your message has been sent successfully.', 'success');
-            e.target.reset();
+            // Try EmailJS first, fallback to mailto if not available
+            if (this.emailjsConfig.enabled && typeof emailjs !== 'undefined' && this.emailjsConfig.publicKey !== 'your_public_key') {
+                await this.sendEmailWithEmailJS(formObject);
+                this.showNotification('Thank you! Your message has been sent successfully.', 'success');
+                e.target.reset();
+            } else {
+                // Fallback to mailto link
+                this.openMailtoLink(formObject);
+                this.showNotification('Opening your email client...', 'info');
+            }
         } catch (error) {
+            console.error('Error sending message:', error);
             this.showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
         }
+    }
+
+    async sendEmailWithEmailJS(formData) {
+        const templateParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            subject: formData.subject || 'Portfolio Contact Form',
+            message: formData.message,
+            to_name: 'Tarequl Islam'
+        };
+
+        return emailjs.send(
+            this.emailjsConfig.serviceId,
+            this.emailjsConfig.templateId,
+            templateParams
+        );
+    }
+
+    openMailtoLink(formData) {
+        const subject = encodeURIComponent(formData.subject || 'Portfolio Contact Form');
+        const body = encodeURIComponent(
+            `Name: ${formData.name}\n` +
+            `Email: ${formData.email}\n\n` +
+            `Message:\n${formData.message}`
+        );
+        const mailtoLink = `mailto:tareq.tmns@email.com?subject=${subject}&body=${body}`;
+        window.open(mailtoLink, '_blank');
     }
 
     async simulateFormSubmission(formData) {
         // Simulate API call delay
         return new Promise((resolve) => {
             setTimeout(() => {
-                console.log('Form submitted:', formData);
+                console.log('Form submitted (simulation):', formData);
                 resolve();
             }, 1000);
         });
