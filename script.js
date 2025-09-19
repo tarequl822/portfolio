@@ -157,7 +157,7 @@ class PortfolioWebsite {
         this.updateElement('heroDescription', this.portfolioData.personal.bio);
 
         // Populate about section
-        this.updateElement('aboutBio', this.portfolioData.personal.bio);
+        this.updateElement('aboutBio', this.portfolioData.personal.aboutBio || this.portfolioData.personal.bio);
         this.updateElement('education', this.portfolioData.education?.[0]?.degree || 'Bachelor of Science in Computer Science');
         this.updateElement('location', this.portfolioData.personal.location);
         this.updateElement('interests', this.portfolioData.interests?.join(', ') || 'Photography, Reading, Hiking, Cooking, Gaming');
